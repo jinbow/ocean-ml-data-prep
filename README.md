@@ -1,6 +1,6 @@
-# Super-Resolution Sea Surface Salinity (SSS) Data Retrieval
+# Prepare training data for ocean ML
 
-## Overview
+## Super-Resolution Sea Surface Salinity (SSS) Data Retrieval
 
 This project provides tools and data descriptions for working with 2D surface field from a 1/48-degree MITgcm simulation (llc4320). The goal is to use these super-high resolution 2D field to create training dataset for machine learning training. In the example, we target on super resolution. This problem is motivated by the need of higher resolution salinity map beyond the current remote sensing capability. 
 
