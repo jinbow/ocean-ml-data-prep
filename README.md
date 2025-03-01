@@ -4,9 +4,9 @@
 
 This project provides tools and data descriptions for working with 2D surface field from a 1/48-degree MITgcm simulation (llc4320). The goal is to use these super-high resolution 2D field to create training dataset for machine learning training. In the example, we target on super resolution. This problem is motivated by the need of higher resolution salinity map beyond the current remote sensing capability. 
 
-## Data Description
+### Data Description
 
-### Global SST/SSS Data
+#### Global SST/SSS Data from llc4320
 - **Added**: June 29, 2024
 - **Location**: The original llc4320 data is stored in NASA AMES HPC.  
 - **Details**: 
@@ -16,21 +16,21 @@ This project provides tools and data descriptions for working with 2D surface fi
 - **File Format**: Binary (big-endian float32, `>f4`)
 - **Resolution**: Original grid is 12960 x 8640, split into eastern and western hemispheres (8640 x 12960 each).
 
-### Utilities
+#### Utilities
 - **File**: `utils.py`
 - **Purpose**: Contains the `mds2d` function to map shrunk 2D data into two 2D fields (eastern and western hemispheres).
 - **Usage**: See the example below.
 
-## Requirements
+### Requirements
 
 To use this data and code, install the following Python packages:
 ```bash
 pip install earthaccess matplotlib xarray requests numpy scipy
 ```
 
-## Usage Example
+### Usage Example
 
-### Loading and Processing SSS Data
+#### Loading and Processing SSS Data
 ```python
 import numpy as np
 import utils
@@ -49,7 +49,7 @@ sss_east, sss_west = utils.mds2d(mask)
 print(sss_east.shape, sss_west.shape)  # Output: (12960, 8640) (8640, 12960)
 ```
 
-### Visualizing the Data
+#### Visualizing the Data
 ```python
 import matplotlib.pyplot as plt
 
